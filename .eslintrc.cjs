@@ -9,6 +9,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:tailwindcss/recommended",
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -17,8 +18,9 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "prettier"],
+  plugins: ["react", "prettier", "tailwindcss"],
   rules: {
+    "react/prop-types": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "prettier/prettier": [
@@ -28,6 +30,7 @@ module.exports = {
         tabWidth: 2,
         semi: true,
         singleQuote: false,
+        printWidth: 80,
       },
     ],
     "react/self-closing-comp": "warn",
